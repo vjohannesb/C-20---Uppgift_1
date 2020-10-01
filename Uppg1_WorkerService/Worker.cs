@@ -20,7 +20,8 @@ namespace Uppg1_WorkerService
         private HttpResponseMessage _response;
 
         private readonly static string _baseUrl = "https://api.openweathermap.org/data/2.5/";
-        private readonly static string _apiUrl = $"{_baseUrl}weather?q=Örebro,se&units=metric"
+        private readonly static string _city = "Örebro";
+        private readonly static string _apiUrl = $"{_baseUrl}weather?q={_city},se&units=metric"
                                                  + $"&appid={Config.API_KEY}";
 
         public Worker(ILogger<Worker> logger)
